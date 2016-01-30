@@ -46,7 +46,7 @@ func (c *client) UploadFile(bucket, source, target string) error {
 	if err != nil {
 		return err
 	}
-	log.Printf("uploaded [%s] to [%s/%s] successfully\n", source, n, bucket, target)
+	log.Printf("uploaded [%s](%d) to [%s/%s] successfully\n", source, n, bucket, target)
 	return nil
 }
 

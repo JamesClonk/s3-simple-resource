@@ -20,6 +20,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"path/filepath"
 
 	"github.com/JamesClonk/s3-simple-resource"
 )
@@ -60,15 +61,14 @@ func main() {
 		request.Source.Insecure,
 	)
 	if err != nil {
-		log.Fatalf("building S3 client: %v\n", err)
+		log.Fatalf("building s3 client: %v\n", err)
 	}
 
-	if err := client.UploadFile(request.Source.Bucket, request.Params.Source, request.Params.Target); err != nil {
+	if err := client.UploadFile(request.Source.Bucket, filepath.Join(destination, request.Params.Source), request.Params.Target); err != nil {
 		log.Fatalf("uploading file: %v\n", err)
 	}
 
-	var response Response
-	if err := json.NewDecoder(os.Stdout).Decode(response); err != nil {
+	if err := json.NewEncoder(os.Stdout).Encode(Response{}); err != nil {
 		log.Fatalf("writing response to stdout: %v\n", err)
 	}
 }

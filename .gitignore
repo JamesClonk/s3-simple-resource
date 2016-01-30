@@ -23,5 +23,6 @@ _testmain.go
 *.test
 *.prof
 
+built-check
 built-in
 built-out
