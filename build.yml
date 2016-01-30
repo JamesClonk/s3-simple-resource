@@ -1,0 +1,10 @@
+---
+platform: linux
+image: docker:///concourse/static-golang
+
+inputs:
+- name: s3-simple-resource
+  path: gopath/src/github.com/JamesClonk/s3-simple-resource
+
+run:
+  path: gopath/src/github.com/JamesClonk/s3-simple-resource/scripts/ci

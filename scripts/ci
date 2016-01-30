@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e 
+set -x
+
+export ROOT=$PWD
+export GOPATH=$PWD/gopath
+export PATH=$GOPATH/bin:$PATH
+
+cd $GOPATH/src/github.com/JamesClonk/s3-simple-resource
+
+make
+
+cd ..
+cp -a s3-simple-resource $ROOT
