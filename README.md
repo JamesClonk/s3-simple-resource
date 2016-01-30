@@ -15,9 +15,9 @@ Concourse resource for simple file upload/download from S3-compatible provider, 
 
 ## Behavior
 
-### `in`: Download a file from the bucket.
+### `in`: Download a file from the bucket
 
-Given a file specified by `source`, download it from the S3 bucket, save it under `target`.
+Given a file specified by `source`, download it from the S3 bucket, save it under `target`
 
 #### Parameters
 
@@ -25,10 +25,9 @@ Given a file specified by `source`, download it from the S3 bucket, save it unde
 
 * `target`: *Required.* Name/destination of new file.
 
+### `out`: Upload a file to the bucket
 
-### `out`: Upload a file to the bucket.
-
-Given a file specified by `source`, upload it to the S3 bucket, save it under `target`.
+Given a file specified by `source`, upload it to the S3 bucket, save it under `target`
 
 #### Parameters
 
