@@ -1,5 +1,5 @@
 # s3-simple-resource
-Concourse resource for simple file upload/download from S3-compatible provider, using signature V2 signing.
+Concourse resource for simple file upload/download from S3-compatible provider, using v2 signature signing.
 
 ## Source Configuration
 

@@ -8,6 +8,11 @@ export PATH=$GOPATH/bin:$PATH
 
 cd $GOPATH/src/github.com/JamesClonk/s3-simple-resource
 
+export GOPATH=$PWD/Godeps/_workspace:$GOPATH
+export PATH=$PWD/Godeps/_workspace/bin:$PATH
+
+go install github.com/minio/minio-go
+
 make
 
 cd ..
