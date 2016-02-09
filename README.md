@@ -1,4 +1,6 @@
 # s3-simple-resource
+
+**This is work-in-progress, do not use yet! :stuck_out_tongue_closed_eyes:**     
 Concourse resource for simple file upload/download from S3-compatible provider, using v2 signature signing.
 
 ## Source Configuration
